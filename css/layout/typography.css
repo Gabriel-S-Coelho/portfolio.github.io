@@ -1,0 +1,72 @@
+/* Typography Improvements */
+
+/* Section Titles */
+body .section__title,
+html .section__title {
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 15px;
+    opacity: 0.6
+}
+
+/* Improved paragraph spacing */
+body .section__content p,
+html .section__content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem
+}
+
+/* Better link styling */
+body a,
+html a {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+/* Headings scale */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.875rem
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem
+}
+
+@media screen and (max-width:768px) {
+    h1 { font-size: 2rem }
+    h2 { font-size: 1.75rem }
+    h3 { font-size: 1.25rem }
+}
+
+/* Better text readability */
+body,
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility
+}
+
+/* Improved selection */
+::-moz-selection {
+    background: #ac3232;
+    color: #fff
+}
+
+::selection {
+    background: #ac3232;
+    color: #fff
+}

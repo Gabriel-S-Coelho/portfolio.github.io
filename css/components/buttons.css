@@ -1,0 +1,117 @@
+/* ========================================
+   Buttons & Interactive Elements
+   ======================================== */
+
+/* Back to Top Button */
+#top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: var(--z-overlay);
+    transition: all var(--transition-normal) var(--transition-ease);
+    box-shadow: var(--shadow-medium);
+    opacity: 0;
+    visibility: hidden;
+}
+
+#top-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#top-button:hover,
+#top-button:focus {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-large);
+}
+
+#top-button::before {
+    content: '↑';
+    color: white;
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+}
+
+@media screen and (max-width: 768px) {
+    #top-button {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Link Styles */
+a {
+    color: var(--text-dark-bright);
+    text-decoration: none;
+    transition: all var(--transition-normal) ease;
+}
+
+body:not(.night) a {
+    color: var(--text-light);
+}
+
+a:hover {
+    color: var(--accent-primary);
+}
+
+/* Arrow Links */
+.arrow-link {
+    font-weight: var(--weight-bold);
+    color: var(--accent-primary);
+    display: inline-block;
+    white-space: nowrap;
+    transition: all var(--transition-normal) ease;
+}
+
+.arrow-link::after {
+    content: ' →';
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+    transition: all var(--transition-normal) ease;
+}
+
+.arrow-link:hover::after {
+    transform: translateX(7px);
+}
+
+/* Underline Links */
+.underline-link {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-link::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--text-dark-bright);
+    opacity: 0.5;
+    transition: all var(--transition-normal) ease;
+}
+
+body:not(.night) .underline-link::after {
+    background: var(--text-light);
+}
+
+.underline-link:hover::after,
+.underline-link:focus::after {
+    height: 2px;
+    border-radius: var(--radius-small);
+    opacity: 1;
+    transform: translateY(-2px);
+}

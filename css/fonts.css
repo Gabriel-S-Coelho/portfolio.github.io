@@ -1,0 +1,82 @@
+/* ========================================
+   Font Declarations
+   ======================================== */
+
+/* Raleway Font Family */
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-LightItalic.ttf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(../fonts/Raleway/Raleway-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Inconsolata Font Family */
+@font-face {
+    font-family: Inconsolata;
+    src: url(../fonts/Inconsolata/Inconsolata-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(../fonts/Inconsolata/Inconsolata-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* BitPotion Font (Legacy) */
+@font-face {
+    font-family: BitPotion;
+    src: url(../fonts/BitPotion/BitPotionExt.ttf);
+    font-style: normal;
+}

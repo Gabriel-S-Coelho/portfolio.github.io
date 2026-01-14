@@ -1,0 +1,189 @@
+.intro {
+    padding: 120px 100px;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: -1
+}
+
+body:not(.night) .intro::before {
+    background: rgba(0, 0, 0, 0.03)
+}
+
+@media screen and (max-width:630px) {
+    .intro {
+        padding: 120px 70px
+    }
+}
+
+@media screen and (max-width:550px) {
+    .intro {
+        padding: 120px 50px
+    }
+}
+
+@media screen and (max-width:480px) {
+    .intro {
+        padding: 70px 50px
+    }
+}
+
+.intro__hello,
+.intro__tagline {
+    font-size: 2.5rem
+}
+
+.night .intro__hello,
+.night .intro__tagline {
+    font-size: 2.5rem
+}
+
+@media screen and (max-width:1024px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: 2.25rem
+    }
+
+    .night .intro__hello,
+    .night .intro__tagline {
+        font-size: 2.25rem
+    }
+}
+
+@media screen and (max-width:768px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: 2rem
+    }
+
+    .night .intro__hello,
+    .night .intro__tagline {
+        font-size: 2rem
+    }
+}
+
+@media screen and (max-width:550px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: 1.75rem
+    }
+}
+
+@media screen and (max-width:360px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: 1.5rem
+    }
+}
+
+@media screen and (max-width:330px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: 1.4rem
+    }
+
+    .night .intro__hello,
+    .night .intro__tagline {
+        font-size: 1.4rem
+    }
+}
+
+.intro__hello .emoji,
+.intro__tagline .emoji {
+    width: 40px;
+    height: 40px
+}
+
+@media screen and (max-width:1024px) {
+    .intro__hello .emoji,
+    .intro__tagline .emoji {
+        width: 35px;
+        height: 35px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .intro__hello .emoji,
+    .intro__tagline .emoji {
+        width: 30px;
+        height: 30px
+    }
+}
+
+@media screen and (max-width:360px) {
+    .intro__hello .emoji,
+    .intro__tagline .emoji {
+        width: 25px;
+        height: 25px
+    }
+}
+
+.intro__hello {
+    font-weight: 300
+}
+
+.intro__wrap {
+    max-width: 1000px;
+    position: relative;
+}
+
+.intro__wrap .intro__icon {
+    float: right;
+}
+
+.intro__wrap .intro__tagline {
+    line-height: 50px;
+}
+
+@media screen and (max-width:550px) {
+    .intro__wrap .intro__icon {
+        float: none;
+        display: none;
+    }
+}
+
+.intro__tagline {
+    font-weight: 300;
+    max-width: 700px;
+    position: relative;
+}
+
+.intro__tagline .name {
+    font-weight: 700
+}
+
+@media screen and (max-width:900px) {
+    .intro__tagline {
+        max-width: 500px;
+    }
+}
+
+.intro__icon {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    width:200px;
+    height:200px;
+}

@@ -1,0 +1,224 @@
+/* ========================================
+   Layout - Centralized Layout System
+   ======================================== */
+
+/* Base Body & HTML */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark-alt);
+    color: var(--text-dark);
+    font-family: var(--font-primary);
+    font-weight: var(--weight-light);
+    line-height: var(--line-height-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color var(--transition-normal) ease,
+                color var(--transition-normal) ease;
+}
+
+body:not(.night) {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+/* Section Layout */
+.section {
+    display: flex;
+    justify-content: center;
+    padding: var(--section-padding-desktop);
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1280px) {
+    .section {
+        padding: var(--section-padding-tablet);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        padding: var(--section-padding-mobile);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section {
+        padding: var(--section-padding-small);
+    }
+}
+
+/* Section Title */
+.section__title {
+    flex-shrink: 0;
+    width: var(--section-title-width);
+    margin-right: 70px;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--letter-spacing-wide);
+    font-size: var(--font-section-title);
+    opacity: 0.6;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    .section__title {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .section__title {
+        width: var(--section-title-width-small);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section__title {
+        text-align: left;
+        width: auto;
+    }
+}
+
+/* Section Content */
+.section__content {
+    font-weight: var(--weight-light);
+    font-size: var(--font-base);
+    width: 100%;
+    max-width: var(--max-width-content);
+}
+
+.section__content p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    line-height: var(--line-height-relaxed);
+}
+
+@media screen and (max-width: 768px) {
+    .section__content {
+        max-width: 100%;
+    }
+}
+
+/* Intro Section */
+.intro {
+    padding: var(--intro-padding-desktop);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: var(--max-width-intro);
+    margin: 0 auto;
+    position: relative;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: var(--z-background);
+}
+
+body:not(.night) .intro::before {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+@media screen and (max-width: 630px) {
+    .intro {
+        padding: var(--intro-padding-tablet);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .intro {
+        padding: var(--intro-padding-mobile);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro {
+        padding: var(--intro-padding-small);
+    }
+}
+
+/* Intro Typography */
+.intro__hello,
+.intro__tagline {
+    font-size: var(--font-intro-large);
+    font-weight: var(--weight-light);
+}
+
+@media screen and (max-width: 1024px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: var(--font-intro-medium);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: var(--font-intro-normal);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: var(--font-intro-small);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: var(--font-intro-tiny);
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .intro__hello,
+    .intro__tagline {
+        font-size: var(--font-intro-micro);
+    }
+}
+
+.intro__tagline {
+    max-width: 700px;
+    position: relative;
+}
+
+@media screen and (max-width: 900px) {
+    .intro__tagline {
+        max-width: 500px;
+    }
+}
+
+.intro__tagline .name {
+    font-weight: var(--weight-bold);
+}
+
+.intro__wrap {
+    max-width: 1000px;
+    position: relative;
+}
+
+.intro__wrap .intro__tagline {
+    line-height: 50px;
+}

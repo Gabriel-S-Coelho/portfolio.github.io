@@ -16,12 +16,12 @@ $(function() {
       $('html, body').animate({scrollTop: 0}, 500);
     });
   
-    //const hand = document.querySelector('.emoji.wave-hand');
+    const hand = document.querySelector('.emoji.wave-hand');
   
-    // function waveOnLoad() {
-    //   hand.classList.add('wave');
-    //   
-    // }
+     function waveOnLoad() {
+      hand.classList.add('wave');
+       
+     }
   
     window.sr = ScrollReveal({
     reset: false,
@@ -34,8 +34,22 @@ $(function() {
     sr.reveal('.background');
     sr.reveal('.skills');
     sr.reveal('.featured-projects', {viewFactor: 0.1});
-    sr.reveal('.jam-projects', {viewFactor: 0.05});
-    sr.reveal('.assets', {viewFactor: 0.05});
+    sr.reveal('.other-projects', {viewFactor: 0.1});
   });
 
-  
+  function toggleProject(header) {
+    const project = header.parentElement;
+    const details = project.querySelector('.project__details');
+    const icon = header.querySelector('.toggle-icon');
+
+    project.classList.toggle('expanded');
+
+    if (project.classList.contains('expanded')) {
+      details.style.maxHeight = details.scrollHeight + 'px';
+      icon.textContent = '−';
+    } else {
+      details.style.maxHeight = '0';
+      icon.textContent = '+';
+    }
+  }
+

@@ -1,0 +1,48 @@
+/* ========================================
+   Skills Component
+   ======================================== */
+
+.skills .skillz {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 630px) {
+    .skills .skillz {
+        flex-wrap: wrap;
+    }
+
+    .skills .skillz__category {
+        width: 47%;
+        margin-right: 5px;
+        margin-bottom: 25px;
+    }
+}
+
+.skills .skillz__category__label {
+    font-weight: var(--weight-bold);
+    color: var(--border-dark);
+    text-transform: uppercase;
+}
+
+body:not(.night) .skills .skillz__category__label {
+    color: var(--text-light);
+}
+
+.skills .skillz__category__item {
+    margin: 3px 0;
+    font-size: var(--font-medium);
+}
+
+.skills .skillz__category__item a {
+    color: var(--text-dark-bright);
+    transition: color var(--transition-normal) ease;
+}
+
+body:not(.night) .skills .skillz__category__item a {
+    color: var(--text-light);
+}
+
+.skills .skillz__category__item a:hover {
+    color: var(--accent-primary);
+}

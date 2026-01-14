@@ -1,0 +1,143 @@
+/* ========================================
+   CSS Variables - Centralized Configuration
+   ======================================== */
+
+:root {
+    /* Colors - Dark Theme (Default) */
+    --bg-dark: #19171b;
+    --bg-dark-alt: #191e27;
+    --text-dark: #afafbf;
+    --text-dark-bright: #e7e7e7;
+    --border-dark: #36363c;
+
+    /* Colors - Light Theme */
+    --bg-light: #f5f5f5;
+    --text-light: #333333;
+    --border-light: #e0e0e0;
+
+    /* Accent Colors */
+    --accent-primary: #ac3232;
+    --accent-secondary: #fc6;
+
+    /* Layout - Spacing */
+    --section-padding-desktop: 100px 170px;
+    --section-padding-tablet: 100px;
+    --section-padding-mobile: 50px;
+    --section-padding-small: 50px 35px;
+
+    --intro-padding-desktop: 120px 100px;
+    --intro-padding-tablet: 120px 70px;
+    --intro-padding-mobile: 120px 50px;
+    --intro-padding-small: 70px 50px;
+
+    /* Layout - Widths */
+    --max-width-container: 1600px;
+    --max-width-intro: 1440px;
+    --max-width-content: 650px;
+
+    --section-title-width: 200px;
+    --section-title-width-small: 150px;
+
+    /* Layout - Gaps */
+    --gap-large: 100px;
+    --gap-medium: 60px;
+    --gap-small: 30px;
+
+    /* Typography - Font Families */
+    --font-primary: Raleway, "Source Sans Pro", Helvetica, Arial, sans-serif;
+    --font-monospace: Inconsolata, monospace;
+
+    /* Typography - Font Sizes */
+    --font-base: 1rem;
+    --font-small: 0.85rem;
+    --font-tiny: 0.75rem;
+    --font-medium: 0.9rem;
+
+    --font-h1: 2.5rem;
+    --font-h2: 2rem;
+    --font-h3: 1.5rem;
+
+    --font-intro-large: 2.5rem;
+    --font-intro-medium: 2.25rem;
+    --font-intro-normal: 2rem;
+    --font-intro-small: 1.75rem;
+    --font-intro-tiny: 1.5rem;
+    --font-intro-micro: 1.4rem;
+
+    --font-section-title: 1.25rem;
+    --font-category-title: 1.5rem;
+    --font-project-title: 1.1rem;
+
+    /* Typography - Font Weights */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Typography - Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.8;
+
+    /* Typography - Letter Spacing */
+    --letter-spacing-tight: 0.5px;
+    --letter-spacing-normal: 1px;
+    --letter-spacing-wide: 2px;
+    --letter-spacing-wider: 3px;
+
+    /* Effects - Transitions */
+    --transition-fast: 0.15s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Effects - Shadows */
+    --shadow-small: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --shadow-large: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+    /* Effects - Border Radius */
+    --radius-small: 3px;
+    --radius-medium: 8px;
+    --radius-large: 50px;
+
+    /* Z-Index Layers */
+    --z-background: -1;
+    --z-base: 1;
+    --z-overlay: 100;
+    --z-modal: 500;
+    --z-top: 1000;
+
+    /* Images - Theme Toggle Icons */
+    --icon-sun-dark: url(../img/switch/sun.svg);
+    --icon-sun-light: url(../img/switch/sun-white.svg);
+    --icon-moon-dark: url(../img/switch/moon.svg);
+    --icon-moon-light: url(../img/switch/moon-white.svg);
+
+    /* Images - Project Placeholders */
+    --img-placeholder: url(../img/placeholder.png);
+
+    /* Selection Colors */
+    --selection-bg: #fc6;
+    --selection-text-dark: #36363c;
+    --selection-text-light: inherit;
+
+    /* Status Light Colors */
+    --status-light-color: #43d08a;
+    --status-light-border: #43d08a;
+}
+
+/* Light Mode Overrides */
+body:not(.night) {
+    --bg-primary: var(--bg-light);
+    --text-primary: var(--text-light);
+    --border-primary: var(--border-light);
+}
+
+/* Dark Mode (Default) */
+body.night {
+    --bg-primary: var(--bg-dark);
+    --text-primary: var(--text-dark);
+    --border-primary: var(--border-dark);
+}

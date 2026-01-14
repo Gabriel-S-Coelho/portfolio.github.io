@@ -1,0 +1,60 @@
+/* ========================================
+   Base Styles - Global Resets & Utilities
+   ======================================== */
+
+/* Box Sizing & Font Smoothing */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Text Selection */
+::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text-light);
+}
+
+::-moz-selection {
+    background: var(--selection-bg);
+    color: var(--selection-text-light);
+}
+
+body.night ::selection,
+body.night ::-moz-selection {
+    color: var(--selection-text-dark);
+    background: var(--selection-bg);
+}
+
+/* Global List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Global Strong Tags */
+strong {
+    font-weight: var(--weight-bold);
+    color: var(--text-dark-bright);
+}
+
+body:not(.night) strong {
+    color: var(--text-light);
+}
+
+/* Emoji Utility */
+.emoji {
+    display: inline-block;
+    vertical-align: text-top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Small Text Utility */
+.small {
+    font-size: var(--font-small);
+}
