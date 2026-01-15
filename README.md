@@ -10,7 +10,7 @@ A personal portfolio website for Gabriel Coelho - Indie Developer and 3D Artist.
 - [Layout Inconsistencies Found](#layout-inconsistencies-found)
 - [How to Customize](#how-to-customize)
 - [Responsive Breakpoints](#responsive-breakpoints)
-
+-
 ---
 
 ## Overview
