@@ -1,0 +1,180 @@
+/* ========================================
+   Utility Classes - Reusable Helpers
+   ======================================== */
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Spacing Utilities */
+.mb-small {
+    margin-bottom: var(--gap-small);
+}
+
+.mb-medium {
+    margin-bottom: var(--gap-medium);
+}
+
+.mb-large {
+    margin-bottom: var(--gap-large);
+}
+
+.mt-small {
+    margin-top: var(--gap-small);
+}
+
+.mt-medium {
+    margin-top: var(--gap-medium);
+}
+
+.mt-large {
+    margin-top: var(--gap-large);
+}
+
+.p-small {
+    padding: var(--gap-small);
+}
+
+.p-medium {
+    padding: var(--gap-medium);
+}
+
+.p-large {
+    padding: var(--gap-large);
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: var(--weight-bold);
+}
+
+.text-light {
+    font-weight: var(--weight-light);
+}
+
+.text-small {
+    font-size: var(--font-small);
+}
+
+.text-medium {
+    font-size: var(--font-medium);
+}
+
+/* Display Utilities */
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Position Utilities */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Width Utilities */
+.w-full {
+    width: 100%;
+}
+
+.w-auto {
+    width: auto;
+}
+
+/* Container Utility */
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    padding: 0 var(--gap-small);
+}
+
+/* Emoji Utility */
+.emoji {
+    display: inline-block;
+    vertical-align: text-top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Accessibility - Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Transitions */
+.transition-all {
+    transition: all var(--transition-normal) ease;
+}
+
+.transition-fast {
+    transition: all var(--transition-fast) ease;
+}
+
+.transition-slow {
+    transition: all var(--transition-slow) ease;
+}

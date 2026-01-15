@@ -1,55 +1,19 @@
 $(function() {
-  
-    const introHeight = document.querySelector('.intro').offsetHeight;
-    const topButton = document.getElementById('top-button');
-    const $topButton = $('#top-button');
-  
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > introHeight) {
-        $topButton.fadeIn();
-      } else {
-        $topButton.fadeOut();
-      }
-    }, false);
-  
-    topButton.addEventListener('click', function() {
-      $('html, body').animate({scrollTop: 0}, 500);
-    });
-  
-    const hand = document.querySelector('.emoji.wave-hand');
-  
-     function waveOnLoad() {
-      hand.classList.add('wave');
-       
-     }
-  
-    window.sr = ScrollReveal({
+  // ScrollReveal setup
+  window.sr = ScrollReveal({
     reset: false,
     duration: 600,
     easing: 'cubic-bezier(.694,0,.335,1)',
     scale: 1,
     viewFactor: 0.3
-    });
-
-    sr.reveal('.background');
-    sr.reveal('.skills');
-    sr.reveal('.featured-projects', {viewFactor: 0.1});
-    sr.reveal('.other-projects', {viewFactor: 0.1});
   });
 
-  function toggleProject(header) {
-    const project = header.parentElement;
-    const details = project.querySelector('.project__details');
-    const icon = header.querySelector('.toggle-icon');
-
-    project.classList.toggle('expanded');
-
-    if (project.classList.contains('expanded')) {
-      details.style.maxHeight = details.scrollHeight + 'px';
-      icon.textContent = '−';
-    } else {
-      details.style.maxHeight = '0';
-      icon.textContent = '+';
-    }
-  }
-
+  sr.reveal('.about');
+  sr.reveal('.skills');
+  sr.reveal('.projects-section', {viewFactor: 0.1});
+  sr.reveal('.project-card', {
+    interval: 100,
+    viewFactor: 0.2
+  });
+  sr.reveal('.other-projects', {viewFactor: 0.1});
+});

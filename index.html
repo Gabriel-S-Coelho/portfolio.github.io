@@ -12,21 +12,14 @@
   <!-- Fonts -->
   <link rel="stylesheet" href="css/fonts.css">
 
-  <!-- Core Styles -->
+  <!-- Core Styles - Option A Structure -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout/layout.css">
-  <link rel="stylesheet" href="css/layout/typography.css">
-
-  <!-- Component Styles -->
-  <link rel="stylesheet" href="css/components/scroll-indicator.css">
-  <link rel="stylesheet" href="css/components/projects.css">
-  <link rel="stylesheet" href="css/components/skills.css">
-  <link rel="stylesheet" href="css/components/experience.css">
-  <link rel="stylesheet" href="css/components/footer.css">
-  <link rel="stylesheet" href="css/components/buttons.css">
-  <link rel="stylesheet" href="css/components/theme-toggle.css">
-  <link rel="stylesheet" href="css/components/micro-interactions.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/themes.css">
   <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
@@ -51,15 +44,13 @@
           <span class="name">Gabriel Coelho</span>, an indie developer and 3D artist.
         </h2>
       </div>
-      <div class="scroll-indicator">
+      <div class="scroll-indicator" onclick="scrollToAbout()">
         <span class="scroll-arrow">↓</span>
       </div>
     </header>
-    
-    <section class="section about" data-sr>
-      <div class="section__title">
-        About
-      </div>
+
+    <section id="about" class="section about" data-sr>
+      <div class="section__title">About</div>
       <div class="section__content">
         <p>I'm an <strong>independent game developer and 3D artist</strong>, currently based in
           <strong>Ribeirão Preto, BR</strong>. I'm passionate about creating immersive gaming experiences
@@ -106,7 +97,7 @@
               <li class="skillz__category__item">Game Design</li>
               <li class="skillz__category__item">Scripting</li>
               <li class="skillz__category__item">Engine</li>
-              <li class="skillz__category__item">3D Moddeling</li>
+              <li class="skillz__category__item">3D Modeling</li>
               <li class="skillz__category__item">General Game Development</li>
             </ul>
           </div>
@@ -117,161 +108,111 @@
     <section class="section projects-section" data-sr>
       <div class="section__title">Projects</div>
       <div class="section__content">
-        <!-- Main Games Section -->
-        <div class="project-category main-games">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <h3 class="category-title">Games</h3>
-            <span class="category-toggle-icon">+</span>
+        <div class="featured-projects">
+          <div class="project-card">
+            <a href="https://tisumii.itch.io/onmyodo" target="_blank" class="project-card__image">
+              <img src="images/onmyodo_banner.jpg" alt="Onmyodo">
+            </a>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Onmyodo</h3>
+              <p class="project-card__description">Set in the Heiran Era in japan, you take control of an onmyoji trying to figure out the cause of yokais appearing in the mountain.</p>
+            </div>
           </div>
-          <div class="category-content">
-            <div class="projects-grid">
-              <div class="featured-projects">
-                <!-- Add main games here -->
-              </div>
+
+          <div class="project-card">
+            <a href="https://tisumii.itch.io/echoes-in-the-abyss" target="_blank" class="project-card__image">
+              <img src="images/echoes_banner.jpg" alt="Echoes in The Abyss">
+            </a>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Echoes in The Abyss</h3>
+              <p class="project-card__description">Embark on a journey through a world shrouded in darkness and shadows. In 'Lost in the Abyss', you traverse a bleak landscape dotted with rocks, boxes, and elusive adversaries.</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <a href="https://tisumii.itch.io/woodsmans-tale" target="_blank" class="project-card__image">
+              <img src="images/woodsman_banner.jpg" alt="Woodsman's Tale">
+            </a>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Woodsman's Tale</h3>
+              <p class="project-card__description">An interpretation of the show Over the Garden Wall where the player tries to experience what the life of woodsmans is like.</p>
             </div>
           </div>
         </div>
 
-        <!-- Game Jams Section (Collapsable) -->
-        <div class="project-category game-jams">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <h3 class="category-title">Game Jams</h3>
-            <span class="category-toggle-icon">−</span>
-          </div>
-          <div class="category-content expanded">
-            <div class="projects-grid">
-              <div class="featured-projects">
-                <div class="project onmyodo">
-                  <figure class="project__pic">
-                    <a href="https://tisumii.itch.io/onmyodo" target="_blank">
-                      <img src="images/onmyodo_banner.jpg" alt="Onmyodo">
-                    </a>
-                  </figure>
-                  <figcaption class="project__caption">
-                    <div class="project__name">
-                      <a href="https://tisumii.itch.io/onmyodo" target="_blank">Onmyodo</a>
-                    </div>
-                    <p>Set in the Heiran Era in japan, you take control of an onmyoji trying to figure out the cause of yokais appearing in the mountain.</p>
-                  </figcaption>
-                </div>
+        <div class="projects-grid">
 
-                <div class="project echoes">
-                  <figure class="project__pic">
-                    <a href="https://tisumii.itch.io/echoes-in-the-abyss" target="_blank">
-                      <img src="images/echoes_banner.jpg" alt="Echoes in The Abyss">
-                    </a>
-                  </figure>
-                  <figcaption class="project__caption">
-                    <div class="project__name">
-                      <a href="https://tisumii.itch.io/echoes-in-the-abyss" target="_blank">Echoes in The Abyss</a>
-                    </div>
-                    <p>Embark on a journey through a world shrouded in darkness and shadows. In 'Lost in the Abyss', you traverse a bleak landscape dotted with rocks, boxes, and elusive adversaries.</p>
-                  </figcaption>
-                </div>
-
-                <div class="project woodsman">
-                  <figure class="project__pic">
-                    <a href="https://tisumii.itch.io/woodsmans-tale" target="_blank">
-                      <img src="images/woodsman_banner.jpg" alt="Woodsman's Tale">
-                    </a>
-                  </figure>
-                  <figcaption class="project__caption">
-                    <div class="project__name">
-                      <a href="https://tisumii.itch.io/woodsmans-tale" target="_blank">Woodsman's Tale</a>
-                    </div>
-                    <p>An interpretation of the show Over the Garden Wall where the player tries to experience what the life of woodsmans is like.</p>
-                  </figcaption>
-                </div>
+          <div class="other-projects">
+            <div class="project collapsable">
+              <div class="project__header" onclick="toggleProject(this)">
+                <h3 class="project__title">Stealth Prototype</h3>
+                <span class="toggle-icon">+</span>
               </div>
-
-              <div class="other-projects">
-                <div class="project collapsable">
-                  <div class="project__header" onclick="toggleProject(this)">
-                    <h3 class="project__title">Stealth Prototype</h3>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                  <div class="project__details">
-                    <p>A stealth game with high speed, movement options clearly inspired by Dishonored.</p>
-                    <div class="project__used">
-                      <span class="project__used__item">Action</span>
-                      <span class="project__used__item">Stealth</span>
-                    </div>
-                    <a href="https://tisumii.itch.io/steahp" target="_blank" class="arrow-link">View Project</a>
-                  </div>
+              <div class="project__details">
+                <p>A stealth game with high speed, movement options clearly inspired by Dishonored.</p>
+                <div class="project__used">
+                  <span class="project__used__item">Action</span>
+                  <span class="project__used__item">Stealth</span>
                 </div>
-
-                <div class="project collapsable">
-                  <div class="project__header" onclick="toggleProject(this)">
-                    <h3 class="project__title">To the Core</h3>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                  <div class="project__details">
-                    <p>On a remote space station orbiting a distant moon, a team of scientists was searching for a way of unlocking travel leaps through time and space.</p>
-                    <div class="project__used">
-                      <span class="project__used__item">Puzzle</span>
-                    </div>
-                    <a href="https://tisumii.itch.io/to-the-core" target="_blank" class="arrow-link">View Project</a>
-                  </div>
-                </div>
-
-                <div class="project collapsable">
-                  <div class="project__header" onclick="toggleProject(this)">
-                    <h3 class="project__title">Parasite Rush</h3>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                  <div class="project__details">
-                    <p>In this game you are a parasite that wants to espace a facility, but outside you test tube, you are slowing diyng and has to constantly change bodies to stay alive.</p>
-                    <div class="project__used">
-                      <span class="project__used__item">Shooter</span>
-                      <span class="project__used__item">Action</span>
-                    </div>
-                    <a href="https://tisumii.itch.io/parasite-jam" target="_blank" class="arrow-link">View Project</a>
-                  </div>
-                </div>
-
-                <div class="project collapsable">
-                  <div class="project__header" onclick="toggleProject(this)">
-                    <h3 class="project__title">Willard's Time</h3>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                  <div class="project__details">
-                    <p>Dr. Willard, a brilliant scientist who unlocked the secrets of time travel. However, his groundbreaking discovery takes a dark twist when he finds himself inexplicably transported to a mysterious realm.</p>
-                    <div class="project__used">
-                      <span class="project__used__item">Horror</span>
-                    </div>
-                    <a href="https://tisumii.itch.io/horror-project" target="_blank" class="arrow-link">View Project</a>
-                  </div>
-                </div>
-
-                <div class="project collapsable">
-                  <div class="project__header" onclick="toggleProject(this)">
-                    <h3 class="project__title">Hunter Survivor</h3>
-                    <span class="toggle-icon">+</span>
-                  </div>
-                  <div class="project__details">
-                    <p>This is my 1st Game. An experimental first effort in game development, available as an action prototype.</p>
-                    <div class="project__used">
-                      <span class="project__used__item">FPS</span>
-                      <span class="project__used__item">Action</span>
-                    </div>
-                    <a href="https://tisumii.itch.io/hunter-survivor" target="_blank" class="arrow-link">View Project</a>
-                  </div>
-                </div>
+                <a href="https://tisumii.itch.io/steahp" target="_blank" class="arrow-link">View Project</a>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- 3D Art Section -->
-        <div class="project-category art-3d">
-          <div class="category-header" onclick="toggleCategory(this)">
-            <h3 class="category-title">3D Art</h3>
-            <span class="category-toggle-icon">+</span>
-          </div>
-          <div class="category-content">
-            <div class="projects-grid">
-              <div class="featured-projects">
-                <!-- Add 3D art projects here -->
+            <div class="project collapsable">
+              <div class="project__header" onclick="toggleProject(this)">
+                <h3 class="project__title">To the Core</h3>
+                <span class="toggle-icon">+</span>
+              </div>
+              <div class="project__details">
+                <p>On a remote space station orbiting a distant moon, a team of scientists was searching for a way of unlocking travel leaps through time and space.</p>
+                <div class="project__used">
+                  <span class="project__used__item">Puzzle</span>
+                </div>
+                <a href="https://tisumii.itch.io/to-the-core" target="_blank" class="arrow-link">View Project</a>
+              </div>
+            </div>
+
+            <div class="project collapsable">
+              <div class="project__header" onclick="toggleProject(this)">
+                <h3 class="project__title">Parasite Rush</h3>
+                <span class="toggle-icon">+</span>
+              </div>
+              <div class="project__details">
+                <p>In this game you are a parasite that wants to espace a facility, but outside you test tube, you are slowing diyng and has to constantly change bodies to stay alive.</p>
+                <div class="project__used">
+                  <span class="project__used__item">Shooter</span>
+                  <span class="project__used__item">Action</span>
+                </div>
+                <a href="https://tisumii.itch.io/parasite-jam" target="_blank" class="arrow-link">View Project</a>
+              </div>
+            </div>
+
+            <div class="project collapsable">
+              <div class="project__header" onclick="toggleProject(this)">
+                <h3 class="project__title">Willard's Time</h3>
+                <span class="toggle-icon">+</span>
+              </div>
+              <div class="project__details">
+                <p>Dr. Willard, a brilliant scientist who unlocked the secrets of time travel. However, his groundbreaking discovery takes a dark twist when he finds himself inexplicably transported to a mysterious realm.</p>
+                <div class="project__used">
+                  <span class="project__used__item">Horror</span>
+                </div>
+                <a href="https://tisumii.itch.io/horror-project" target="_blank" class="arrow-link">View Project</a>
+              </div>
+            </div>
+
+            <div class="project collapsable">
+              <div class="project__header" onclick="toggleProject(this)">
+                <h3 class="project__title">Hunter Survivor</h3>
+                <span class="toggle-icon">+</span>
+              </div>
+              <div class="project__details">
+                <p>This is my 1st Game. An experimental first effort in game development, available as an action prototype.</p>
+                <div class="project__used">
+                  <span class="project__used__item">FPS</span>
+                  <span class="project__used__item">Action</span>
+                </div>
+                <a href="https://tisumii.itch.io/hunter-survivor" target="_blank" class="arrow-link">View Project</a>
               </div>
             </div>
           </div>
@@ -290,27 +231,26 @@
         <a href="https://x.com/gabriel_d_s_c" target="_blank" title="twitter">
           <span class="text">twitter</span>
           <i class="fab fa-twitter"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
+        </a>
         <a href="https://github.com/Gabriel-S-Coelho" target="_blank" title="github">
           <span class="text">github</span>
           <i class="fab fa-github"></i>
-          <img src="images/itchio.svg" alt="twitter"> </a>
+        </a>
         <a href="https://tisumii.itch.io/" target="_blank" title="itch.io">
           <span class="text">itch.io</span>
-          <img class="dont-hide" src="images/itchio.svg" alt="twitter"> </a>    
         </a>
       </div>
     </footer>
 
-    <button id="top-button" style="display: inline-block;">
-      <img src="" alt=""> </button>
+    <button id="top-button" style="display: inline-block;">↑</button>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="js/components/scroll-indicator.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/components/scroll-to-top.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/components/scroll-effects.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/components/project-toggle.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/components/theme-toggle.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>

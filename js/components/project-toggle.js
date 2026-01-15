@@ -14,18 +14,3 @@ function toggleProject(header) {
     icon.textContent = '+';
   }
 }
-
-// Toggle Project Category
-function toggleCategory(header) {
-  const category = header.parentElement;
-  const content = category.querySelector('.category-content');
-  const icon = header.querySelector('.category-toggle-icon');
-
-  content.classList.toggle('expanded');
-
-  if (content.classList.contains('expanded')) {
-    icon.textContent = '−';
-  } else {
-    icon.textContent = '+';
-  }
-}

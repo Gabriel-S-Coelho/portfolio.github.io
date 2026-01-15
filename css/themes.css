@@ -1,0 +1,146 @@
+/* ========================================
+   Themes - Theme Toggle & Variations
+   ======================================== */
+
+/* ========================================
+   THEME TOGGLE BUTTON
+   ======================================== */
+.theme-toggle {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: var(--z-top);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-large);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all var(--transition-normal) var(--transition-ease);
+    box-shadow: var(--shadow-small);
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.theme-toggle:active {
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        top: 20px;
+        right: 20px;
+        padding: 10px 16px;
+    }
+}
+
+/* Theme Icons */
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    transition: all var(--transition-normal) ease;
+    position: relative;
+}
+
+.theme-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: #ffffff;
+}
+
+/* Sun Icon (Light Mode) */
+.theme-icon.sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.night .theme-icon.sun {
+    opacity: 0;
+    transform: rotate(180deg) scale(0);
+}
+
+/* Moon Icon (Dark Mode) */
+.theme-icon.moon {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+    position: absolute;
+    left: 12px;
+}
+
+.night .theme-icon.moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Theme Label */
+.theme-label {
+    font-size: var(--font-small);
+    font-weight: var(--weight-semibold);
+    color: #ffffff;
+    letter-spacing: var(--letter-spacing-tight);
+    text-transform: uppercase;
+    user-select: none;
+}
+
+@media screen and (max-width: 480px) {
+    .theme-label {
+        display: none;
+    }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES
+   ======================================== */
+body:not(.night) .theme-toggle {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body:not(.night) .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-color: var(--accent-primary);
+}
+
+body:not(.night) .theme-icon svg {
+    fill: #333333;
+}
+
+body:not(.night) .theme-label {
+    color: #333333;
+}
+
+body:not(.night) .project__title {
+    color: #1a1a1a;
+}
+
+body:not(.night) .featured-projects .project__caption {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333333;
+}
+
+body:not(.night) .other-projects .project {
+    border-bottom-color: var(--border-light);
+}
+
+/* ========================================
+   SMOOTH THEME TRANSITIONS
+   ======================================== */
+body,
+.section__title,
+.theme-toggle,
+.featured-projects .project__caption,
+.project__title,
+a,
+strong {
+    transition: background-color var(--transition-normal) ease,
+                color var(--transition-normal) ease,
+                border-color var(--transition-normal) ease;
+}
