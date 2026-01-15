@@ -157,6 +157,7 @@ body:not(.night) .skills .skillz__category__item a {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-bottom: 80px;
+    align-items: stretch;
 }
 
 @media screen and (max-width: 768px) {
@@ -174,6 +175,9 @@ body:not(.night) .skills .skillz__category__item a {
     overflow: hidden;
     transition: transform var(--transition-normal) ease, box-shadow var(--transition-normal) ease;
     box-shadow: var(--shadow-small);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {

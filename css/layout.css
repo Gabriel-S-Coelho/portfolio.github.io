@@ -31,12 +31,13 @@ body:not(.night) {
    ======================================== */
 .section {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     padding: var(--section-padding-desktop);
-    max-width: var(--max-width-container);
+    max-width: 1600px;
     margin: 0 auto;
     animation: fadeInUp 0.6s ease-out;
     width: 100%;
+    position: relative;
 }
 
 @media screen and (max-width: 1280px) {
@@ -65,9 +66,10 @@ body:not(.night) {
 
 /* Section Title */
 .section__title {
-    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    top: var(--section-padding-desktop);
     width: var(--section-title-width);
-    margin-right: 70px;
     color: var(--accent-primary);
     text-transform: uppercase;
     text-align: right;
@@ -78,12 +80,6 @@ body:not(.night) {
     padding-bottom: 15px;
 }
 
-@media screen and (max-width: 1024px) {
-    .section__title {
-        margin-right: 50px;
-    }
-}
-
 @media screen and (max-width: 850px) {
     .section__title {
         width: var(--section-title-width-small);
@@ -92,6 +88,7 @@ body:not(.night) {
 
 @media screen and (max-width: 768px) {
     .section__title {
+        position: static;
         text-align: left;
         width: auto;
         margin-bottom: 20px;
@@ -108,7 +105,7 @@ body:not(.night) {
 
 /* Projects section needs full width for grid */
 .projects-section .section__content {
-    max-width: 100%;
+    max-width: 1000px;
 }
 
 .section__content p {
