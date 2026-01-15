@@ -156,6 +156,48 @@
     }
 }
 
+/* Hover Effects */
+@keyframes hoverLift {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+@keyframes hoverLiftCard {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Theme Toggle Animations */
+@keyframes iconRotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes iconRotateOut {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(180deg) scale(0);
+    }
+}
+
 /* Accessibility - Reduce Motion */
 @media (prefers-reduced-motion: reduce) {
     *,

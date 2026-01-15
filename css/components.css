@@ -111,13 +111,6 @@ body:not(.night) .underline-link::after {
     }
 }
 
-.skills .skillz__category {
-    transition: transform 0.3s ease;
-}
-
-.skills .skillz__category:hover {
-    transform: translateX(5px);
-}
 
 .skills .skillz__category__label {
     font-weight: var(--weight-bold);
@@ -181,8 +174,8 @@ body:not(.night) .skills .skillz__category__item a {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
     box-shadow: var(--shadow-large);
+    animation: hoverLiftCard 0.3s ease forwards;
 }
 
 body:not(.night) .project-card {
@@ -203,11 +196,6 @@ body:not(.night) .project-card {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card__image:hover img {
-    transform: scale(1.08);
 }
 
 /* Card Content */
@@ -507,7 +495,7 @@ body:not(.night) .footer__copyright {
    ======================================== */
 
 /* Link hover effects */
-.section__content a:not(.arrow-link):hover {
+.section__content a:not(.arrow-link):not(.project-card__image):hover {
     transform: translateX(3px);
 }
 

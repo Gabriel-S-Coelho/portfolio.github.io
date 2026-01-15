@@ -26,8 +26,8 @@
 .theme-toggle:hover {
     background: rgba(0, 0, 0, 0.5);
     border-color: var(--accent-primary);
-    transform: translateY(-2px);
     box-shadow: var(--shadow-medium);
+    animation: hoverLift 0.3s ease forwards;
 }
 
 .theme-toggle:active {
@@ -58,26 +58,22 @@
 
 /* Sun Icon (Light Mode) */
 .theme-icon.sun {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+    animation: iconRotateIn 0.3s ease forwards;
 }
 
 .night .theme-icon.sun {
-    opacity: 0;
-    transform: rotate(180deg) scale(0);
+    animation: iconRotateOut 0.3s ease forwards;
 }
 
 /* Moon Icon (Dark Mode) */
 .theme-icon.moon {
-    opacity: 0;
-    transform: rotate(-180deg) scale(0);
     position: absolute;
     left: 12px;
+    animation: iconRotateOut 0.3s ease forwards;
 }
 
 .night .theme-icon.moon {
-    opacity: 1;
-    transform: rotate(0deg) scale(1);
+    animation: iconRotateIn 0.3s ease forwards;
 }
 
 /* Theme Label */

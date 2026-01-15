@@ -19,6 +19,8 @@ html {
     text-rendering: optimizeLegibility;
     transition: background-color var(--transition-normal) ease,
                 color var(--transition-normal) ease;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body:not(.night) {
@@ -225,21 +227,6 @@ body:not(.night) .intro::before {
     font-weight: var(--weight-bold);
     position: relative;
     display: inline-block;
-}
-
-.intro__tagline .name::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent-primary);
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.intro__tagline .name:hover::after {
-    width: 100%;
 }
 
 .intro__wrap {
