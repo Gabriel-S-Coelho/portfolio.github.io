@@ -16,8 +16,8 @@
     --border-light: #e0e0e0;
 
     /* Accent Colors */
-    --accent-primary: #ac3232;
-    --accent-secondary: #fc6;
+    --accent-primary: #aa2424;
+    --accent-secondary: rgb(223, 221, 100);
 
     /* Layout - Spacing */
     --section-padding-desktop: 100px 170px;
