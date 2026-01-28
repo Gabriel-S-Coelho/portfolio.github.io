@@ -19,22 +19,36 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/art-gallery.css">
   <link rel="stylesheet" href="css/themes.css">
   <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <body>
-  <!-- Theme Toggle -->
-  <button class="theme-toggle" aria-label="Toggle dark/light mode">
-    <span class="theme-icon sun">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>
-    </span>
-    <span class="theme-icon moon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"/></svg>
-    </span>
-    <span class="theme-label">Theme</span>
-  </button>
+  <!-- Sticky Navigation Bar -->
+  <nav class="sticky-nav" id="stickyNav">
+    <div class="sticky-nav__container">
+      <a href="#" class="sticky-nav__logo">GC</a>
+      <ul class="sticky-nav__links">
+        <li><a href="#about" class="sticky-nav__link">About</a></li>
+        <li><a href="#skills" class="sticky-nav__link">Skills</a></li>
+        <li><a href="#game-projects" class="sticky-nav__link">Game Projects</a></li>
+        <li><a href="#3d-art" class="sticky-nav__link">3D Art</a></li>
+      </ul>
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span class="theme-icon sun">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/></svg>
+        </span>
+        <span class="theme-icon moon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"/></svg>
+        </span>
+        <span class="theme-label">Theme</span>
+      </button>
+    </div>
+  </nav>
 
   <div id="site">
     <header class="intro">
@@ -43,9 +57,6 @@
         <h2 class="intro__tagline">I'm
           <span class="name">Gabriel Coelho</span>, an indie developer and 3D artist.
         </h2>
-      </div>
-      <div class="scroll-indicator" onclick="scrollToAbout()">
-        <span class="scroll-arrow">↓</span>
       </div>
     </header>
 
@@ -70,7 +81,7 @@
       </div>
     </section>
 
-    <section class="section skills" data-sr>
+    <section id="skills" class="section skills" data-sr>
       <div class="section__title">Skills</div>
       <div class="section__content">
         <div class="skillz">
@@ -127,8 +138,8 @@
       </div>
     </section>
 
-    <section class="section projects-section" data-sr>
-      <div class="section__title">Projects</div>
+    <section id="game-projects" class="section projects-section" data-sr>
+      <div class="section__title">Game Projects</div>
       <div class="section__content">
         <div class="featured-projects">
           
@@ -144,23 +155,23 @@
 
           
           <div class="project-card">
-            <a href="https://tisumii.itch.io/echoes-in-the-abyss" target="_blank" class="project-card__image">
-              <img src="images/echoes_banner.jpg" alt="Echoes in The Abyss">
-            </a>
-            <div class="project-card__content">
-              <h3 class="project-card__title">Echoes in The Abyss</h3>
-              <p class="project-card__description">Embark on a journey through a world shrouded in darkness and shadows. In &#39;Lost in the Abyss&#39;, you traverse a bleak landscape dotted with rocks, boxes, and elusive adversaries.</p>
-            </div>
-          </div>
-
-          
-          <div class="project-card">
             <a href="https://tisumii.itch.io/woodsmans-tale" target="_blank" class="project-card__image">
               <img src="images/woodsman_banner.jpg" alt="Woodsman&#39;s Tale">
             </a>
             <div class="project-card__content">
               <h3 class="project-card__title">Woodsman&#39;s Tale</h3>
               <p class="project-card__description">An interpretation of the show Over the Garden Wall where the player tries to experience what the life of woodsmans is like.</p>
+            </div>
+          </div>
+
+          
+          <div class="project-card">
+            <a href="https://tisumii.itch.io/echoes-in-the-abyss" target="_blank" class="project-card__image">
+              <img src="images/echoes_banner.jpg" alt="Echoes in The Abyss">
+            </a>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Echoes in The Abyss</h3>
+              <p class="project-card__description">Embark on a journey through a world shrouded in darkness and shadows. In &#39;Lost in the Abyss&#39;, you traverse a bleak landscape dotted with rocks, boxes, and elusive adversaries.</p>
             </div>
           </div>
 
@@ -196,7 +207,6 @@
                   <span class="project__used__item">Action</span>
                   
                 </div>
-                <a href="https://tisumii.itch.io/parasite-jam" target="_blank" class="arrow-link">View Project</a>
               </div>
             </div>
 
@@ -213,7 +223,6 @@
                   <span class="project__used__item">Horror</span>
                   
                 </div>
-                <a href="https://tisumii.itch.io/horror-project" target="_blank" class="arrow-link">View Project</a>
               </div>
             </div>
 
@@ -232,12 +241,49 @@
                   <span class="project__used__item">Action</span>
                   
                 </div>
-                <a href="https://tisumii.itch.io/hunter-survivor" target="_blank" class="arrow-link">View Project</a>
               </div>
             </div>
 
             
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="3d-art" class="section art-section" data-sr>
+      <div class="section__title">3D Art</div>
+      <div class="section__content">
+        <div class="art-gallery">
+          
+            
+            <div class="art-item">
+              <div class="art-item__embed">
+                <div class="sketchfab-embed-wrapper">
+                  <iframe
+                    title="Andromeda"
+                    frameborder="0"
+                    allowfullscreen
+                    mozallowfullscreen="true"
+                    webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking
+                    execution-while-out-of-viewport
+                    execution-while-not-rendered
+                    web-share
+                    src="https://sketchfab.com/models/ad0d00de69214dcc9049a11185a9c5e6/embed">
+                  </iframe>
+                </div>
+              </div>
+              <div class="art-item__info">
+                <h3 class="art-item__title">Andromeda</h3>
+                
+                <p class="art-item__description">A 3D character made in inspiration by :
+https://www.artstation.com/artwork/ZeKd5x</p>
+                
+              </div>
+            </div>
+            
+          
         </div>
       </div>
     </section>
@@ -272,10 +318,11 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-  <script src="js/components/scroll-indicator.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/components/scroll-to-top.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/components/project-toggle.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/components/sticky-nav.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/components/theme-toggle.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/components/sketchfab-observer.js" type="text/javascript" charset="utf-8"></script>
   <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
