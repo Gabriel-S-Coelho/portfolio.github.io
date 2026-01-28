@@ -4,11 +4,11 @@
 
 :root {
     /* Colors - Dark Theme (Default) */
-    --bg-dark: #19171b;
+    --bg-dark: hsl(0, 0%, 0%);
     --bg-dark-alt: #191e27;
     --text-dark: #d4d4d4;
     --text-dark-bright: #f7f7f7;
-    --border-dark: #36363c;
+    --border-dark: #151518;
 
     /* Colors - Light Theme */
     --bg-light: #f5f5f5;
